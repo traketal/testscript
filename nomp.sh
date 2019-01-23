@@ -20,12 +20,10 @@ function EPHYMERAL_PORT(){
 veil-cli stop
 sleep 2
 seed="$(veild -generateseed=1)"
-# Get its PID
-PID=$!
-# Wait for 5 seconds
-sleep 5
-# Kill it
-kill $PID
+
+
+trap ' ' INT
+
 veil-cli stop
 sleep 2
 veild -daemon=1
