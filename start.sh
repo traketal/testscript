@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $HOME/veilnomp/install
+cd $HOME/veilpool/install
 
 source functions.sh # load our functions
 # copy functions to /etc
