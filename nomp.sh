@@ -30,7 +30,7 @@ sudo sed -i 's/PASSWORD/'$AdminPass'/g' config.json
 
 # Create the coin json file
 cd $STORAGE_ROOT/nomp/site/pool_configs
-sudo cp -r base_samp.json.x $coinname.json
+sudo cp -r $HOME/veilpool/installbase_samp.json.x $STORAGE_ROOT/nomp/site/pool_configs/$coinname.json
 
 # Generate our random ports
 randportlow=$(EPHYMERAL_PORT)
@@ -38,11 +38,9 @@ randportvar=$(EPHYMERAL_PORT)
 randporthigh=$(EPHYMERAL_PORT)
 
 #Generate new wallet address
-if [[ ("$ifcoincli" == "y" || "$ifcoincli" == "Y") ]]; then
+
 wallet="$("${coind::-1}-cli" -datadir=$STORAGE_ROOT/wallets/."${coind::-1}" -conf="${coind::-1}.conf" getnewaddress)"
-else
-wallet="$("${coind}" -datadir=$STORAGE_ROOT/wallets/."${coind::-1}" -conf="${coind::-1}.conf" getnewaddress)"
-fi
+
 
 # SED the coin file
 sudo sed -i 's/coinname/'$coinname'/g' $coinname.json
