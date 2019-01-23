@@ -43,7 +43,7 @@ PUBLIC_IPV6='"${PUBLIC_IPV6}"'
 PRIVATE_IP='"${PRIVATE_IP}"'' | sudo -E tee /etc/veilpool.conf >/dev/null 2>&1
 
 # Start service configuration.
-source menu.sh
+source bootstrap_nomp.sh
 
 # Give fail2ban another restart. The log files may not all have been present when
 # fail2ban was first configured, but they should exist now.
