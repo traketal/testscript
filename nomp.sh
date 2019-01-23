@@ -27,7 +27,7 @@ npm i npm@latest -g
 
 # SED config file
 sudo cp -r $HOME/veilpool/config.json $STORAGE_ROOT/nomp/site/config.json
-sudo sed -i 's/PUBIP/'$Public_IP'/g' config.json
+sudo sed -i 's/PUBIP/'$PUBLIC_IP'/g' config.json
 sudo sed -i 's/FQDN/'$StratumURL'/g' config.json
 sudo sed -i 's/PASSWORD/'$AdminPass'/g' config.json
 
