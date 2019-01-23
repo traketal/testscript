@@ -119,12 +119,8 @@ apt_install build-essential libtool autotools-dev \
 autoconf pkg-config libssl-dev libboost-all-dev git \
 libminiupnpc-dev libgmp3-dev
 
-sleep 3
-
 echo Installing Node 8.x
 cd $STORAGE_ROOT/nomp/nomp_setup/tmp
-
-sleep 1
 
 curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh -o install_nvm.sh
 hide_output bash install_nvm.sh
