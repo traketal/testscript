@@ -9,6 +9,40 @@ sudo cp -r functions.sh /etc/
 #check for user
 echo Installing needed packages for setup to continue...
 
+
+# Ensure Python reads/writes files in UTF-8. If the machine
+# triggers some other locale in Python, like ASCII encoding,
+# Python may not be able to read/write files. This is also
+# in the management daemon startup script and the cron script.
+
+if ! locale -a | grep en_US.utf8 > /dev/null; then
+# Generate locale if not exists
+hide_output locale-gen en_US.UTF-8
+fi
+
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_TYPE=en_US.UTF-8
+
+# Fix so line drawing characters are shown correctly in Putty on Windows. See #744.
+export NCURSES_NO_UTF8_ACS=1
+
+# Recall the last settings used if we're running this a second time.
+if [ -f /etc/multipool.conf ]; then
+
+# Load the old .conf file to get existing configuration options loaded
+# into variables with a DEFAULT_ prefix.
+cat /etc/multipool.conf | sed s/^/DEFAULT_/ > /tmp/multipool.prev.conf
+source /tmp/multipool.prev.conf
+rm -f /tmp/multipool.prev.conf
+else
+FIRST_TIME_SETUP=1
+fi
+
+#check for user
+echo Installing needed packages for setup to continue...
+
 sudo apt-get -q -q update
 apt_get_quiet install dialog python3 python3-pip acl nano git || exit 1
 
