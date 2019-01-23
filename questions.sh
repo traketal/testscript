@@ -1,5 +1,5 @@
 source /etc/functions.sh
-source /etc/multipool.conf
+source /etc/veilpool.conf
 
 message_box "Veil NOMP Setup Installer" \
 "You have choosen to install NOMP Single Server!
@@ -181,7 +181,7 @@ clear;
 echo '
 autogen=true
 berkeley="4.8"
-' | sudo -E tee $HOME/multipool/daemon_builder/.my.cnf >/dev/null 2>&1;
+' | sudo -E tee $HOME/veilpool/daemon_builder/.my.cnf >/dev/null 2>&1;
 fi
 
 if [ $RESULT = 2 ]
