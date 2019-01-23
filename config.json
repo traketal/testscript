@@ -34,7 +34,7 @@
 
     "website": {
         "enabled": true,
-        "host": "0.0.0.0",
+        "host": "PUBIP",
         "port": 80,
         "stratumHost": "FQDN",
         "stats": {
