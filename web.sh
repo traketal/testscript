@@ -28,8 +28,8 @@ echo Setting correct folder permissions...
 whoami=`whoami`
 sudo usermod -aG www-data $whoami
 sudo usermod -a -G www-data $whoami
-sudo usermod -a -G crypto-data $whoami
-sudo usermod -a -G crypto-data www-data
+sudo usermod -a -G pool-data $whoami
+sudo usermod -a -G pool-data www-data
 
 sudo find $STORAGE_ROOT/nomp/site/ -type d -exec chmod 775 {} +
 sudo find $STORAGE_ROOT/nomp/site/ -type f -exec chmod 664 {} +
