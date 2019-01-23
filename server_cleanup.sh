@@ -1,4 +1,5 @@
 source /etc/functions.sh
+source /etc/veilpool.conf
 source $STORAGE_ROOT/nomp/.nomp.conf
 
 echo Installing cron screens to crontab...
