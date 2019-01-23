@@ -26,12 +26,13 @@ npm install
 npm i npm@latest -g
 
 # SED config file
+sudo cp -r $HOME/veilpool/config.json $STORAGE_ROOT/nomp/site/config.json
 sudo sed -i 's/FQDN/'$StratumURL'/g' config.json
 sudo sed -i 's/PASSWORD/'$AdminPass'/g' config.json
 
 # Create the coin json file
 cd $STORAGE_ROOT/nomp/site/pool_configs
-sudo cp -r $HOME/veilpool/installbase_samp.json.x $STORAGE_ROOT/nomp/site/pool_configs/$coinname.json
+sudo cp -r $HOME/veilpool/installbase_samp.json.x $STORAGE_ROOT/nomp/site/pool_configs/veil.json
 
 # Generate our random ports
 randportlow=$(EPHYMERAL_PORT)
@@ -39,8 +40,13 @@ randportvar=$(EPHYMERAL_PORT)
 randporthigh=$(EPHYMERAL_PORT)
 
 #Generate new wallet address
-
-wallet="$("${coind::-1}-cli" -datadir=$STORAGE_ROOT/wallets/."${coind::-1}" -conf="${coind::-1}.conf" getnewaddress)"
+/usr/bin/veil-cli stop
+sleep 2
+seed="$(veild -generateseed=1)"
+sleep 2
+/usr/bin/veil-cli stop
+sleep 2
+wallet="$(veil-cli -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf getnewbasecoinaddress)"
 
 
 # SED the coin file
