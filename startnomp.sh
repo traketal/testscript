@@ -3,34 +3,17 @@
 source /etc/functions.sh
 source /etc/veilpool.conf
 
-# Set STORAGE_USER and STORAGE_ROOT to default values (crypto-data and /home/crypto-data), unless
-# we've already got those values from a previous run.
-if [ -z "$STORAGE_USER" ]; then
-STORAGE_USER=$([[ -z "$DEFAULT_STORAGE_USER" ]] && echo "pool-data" || echo "$DEFAULT_STORAGE_USER")
-fi
-if [ -z "$STORAGE_ROOT" ]; then
-STORAGE_ROOT=$([[ -z "$DEFAULT_STORAGE_ROOT" ]] && echo "/home/$STORAGE_USER" || echo "$DEFAULT_STORAGE_ROOT")
-fi
-
 # Create the temporary installation directory if it doesn't already exist.
 echo Creating the temporary NOMP installation folder...
 if [ ! -d $STORAGE_ROOT/nomp/nomp_setup ]; then
 sudo mkdir -p $STORAGE_ROOT/nomp
-sleep 1
 sudo mkdir -p $STORAGE_ROOT/nomp/nomp_setup
-sleep 1
 sudo mkdir -p $STORAGE_ROOT/nomp/nomp_setup/tmp
-sleep 1
 sudo mkdir -p $STORAGE_ROOT/nomp/site
-sleep 1
 sudo mkdir -p $STORAGE_ROOT/nomp/starts
-sleep 1
 sudo mkdir -p $STORAGE_ROOT/wallets
-sleep 1
 sudo mkdir -p $HOME/veilpool/daemon_builder
-sleep 1
 sudo mkdir -p $STORAGE_ROOT/daemon_builder
-sleep 1
 fi
 sudo setfacl -m u:$USER:rwx $STORAGE_ROOT/nomp
 sudo setfacl -m u:$USER:rwx $STORAGE_ROOT/nomp/site
