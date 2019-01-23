@@ -67,4 +67,4 @@ sudo chmod +x /usr/bin/veil
 echo 'rpcpassword='${rpcpassword}'
 rpcport='${rpcport}''| sudo -E tee $HOME/multipool/daemon_builder/.my.cnf
 
-cd $HOME/veilpool/nomp
+cd $HOME/veilpool/install
