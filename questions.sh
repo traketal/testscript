@@ -209,4 +209,4 @@ AdminPass='"'"''"${AdminPass}"''"'"'
 coinrepo='"${coinrepo}"'
 ' | sudo -E tee $STORAGE_ROOT/nomp/.nomp.conf >/dev/null 2>&1
 
-cd $HOME/veilpool/nomp
+cd $HOME/veilpool/install
