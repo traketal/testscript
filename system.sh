@@ -1,5 +1,6 @@
 clear
 source /etc/functions.sh
+source /etc/veilpool.conf
 source $STORAGE_ROOT/nomp/.nomp.conf
 
 cd $HOME/veilpool/install
