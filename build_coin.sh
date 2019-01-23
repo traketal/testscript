@@ -69,7 +69,7 @@ sudo chmod +x /usr/bin/veil
 # If we made it this far everything built fine removing last coin.conf and build directory
 
 sudo rm -r $STORAGE_ROOT/daemon_builder/veil
-sudo rm -r $HOME/multipool/daemon_builder/.my.cnf
+sudo rm -r $HOME/veilpool/daemon_builder/.my.cnf
 
 echo 'rpcpassword='${rpcpassword}'
 rpcport='${rpcport}''| sudo -E tee $HOME/veilpool/daemon_builder/.my.cnf
