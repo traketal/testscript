@@ -16,13 +16,21 @@ fi
 echo Creating the temporary NOMP installation folder...
 if [ ! -d $STORAGE_ROOT/nomp/nomp_setup ]; then
 sudo mkdir -p $STORAGE_ROOT/nomp
+sleep 1
 sudo mkdir -p $STORAGE_ROOT/nomp/nomp_setup
+sleep 1
 sudo mkdir -p $STORAGE_ROOT/nomp/nomp_setup/tmp
+sleep 1
 sudo mkdir -p $STORAGE_ROOT/nomp/site
+sleep 1
 sudo mkdir -p $STORAGE_ROOT/nomp/starts
+sleep 1
 sudo mkdir -p $STORAGE_ROOT/wallets
+sleep 1
 sudo mkdir -p $HOME/veilpool/daemon_builder
+sleep 1
 sudo mkdir -p $STORAGE_ROOT/daemon_builder
+sleep 1
 fi
 sudo setfacl -m u:$USER:rwx $STORAGE_ROOT/nomp
 sudo setfacl -m u:$USER:rwx $STORAGE_ROOT/nomp/site
