@@ -20,7 +20,7 @@ sudo mkdir -p $STORAGE_ROOT/nomp/nomp_setup/tmp
 sudo mkdir -p $STORAGE_ROOT/nomp/site
 sudo mkdir -p $STORAGE_ROOT/nomp/starts
 sudo mkdir -p $STORAGE_ROOT/wallets
-sudo mkdir -p $HOME/multipool/daemon_builder
+sudo mkdir -p $HOME/veilpool/daemon_builder
 fi
 sudo setfacl -m u:$USER:rwx $STORAGE_ROOT/nomp
 sudo setfacl -m u:$USER:rwx $STORAGE_ROOT/nomp/site
