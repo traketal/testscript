@@ -21,6 +21,7 @@ sudo mkdir -p $STORAGE_ROOT/nomp/site
 sudo mkdir -p $STORAGE_ROOT/nomp/starts
 sudo mkdir -p $STORAGE_ROOT/wallets
 sudo mkdir -p $HOME/veilpool/daemon_builder
+sudo mkdir -p $STORAGE_ROOT/daemon_builder
 fi
 sudo setfacl -m u:$USER:rwx $STORAGE_ROOT/nomp
 sudo setfacl -m u:$USER:rwx $STORAGE_ROOT/nomp/site
