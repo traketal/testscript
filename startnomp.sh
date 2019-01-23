@@ -32,7 +32,8 @@ source motd.sh
 source server_harden.sh
 source server_cleanup.sh
 
-clear
+# clear
+
 echo Installation of your NOMP single server is now completed.
 echo You *MUST* reboot the machine to finalize the machine updates and folder permissions! NOMP will not function until a reboot is performed!
 echo
