@@ -15,6 +15,7 @@ fi
 # Create the temporary installation directory if it doesn't already exist.
 echo Creating the temporary NOMP installation folder...
 if [ ! -d $STORAGE_ROOT/nomp/nomp_setup ]; then
+sudo mkdir -p $STORAGE_ROOT/nomp
 sudo mkdir -p $STORAGE_ROOT/nomp/nomp_setup
 sudo mkdir -p $STORAGE_ROOT/nomp/nomp_setup/tmp
 sudo mkdir -p $STORAGE_ROOT/nomp/site
