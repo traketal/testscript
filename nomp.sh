@@ -51,13 +51,13 @@ wallet="$(veil-cli -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf getnewba
 
 
 # SED the pool config coin file
-sudo sed -i 's/wallet/'$wallet'/g' $coinname.json
-sudo sed -i 's/daemonport/'$rpcport'/g' $coinname.json
-sudo sed -i 's/rpcuser/NOMPrpc/g' $coinname.json
-sudo sed -i 's/rpcpass/'$rpcpassword'/g' $coinname.json
-sudo sed -i 's/randportlow/'$randportlow'/g' $coinname.json
-sudo sed -i 's/randportvar/'$randportvar'/g' $coinname.json
-sudo sed -i 's/randporthigh/'$randporthigh'/g' $coinname.json
+sudo sed -i 's/wallet/'$wallet'/g' veil.json
+sudo sed -i 's/daemonport/'$rpcport'/g' veil.json
+sudo sed -i 's/rpcuser/NOMPrpc/g' veil.json
+sudo sed -i 's/rpcpass/'$rpcpassword'/g' veil.json
+sudo sed -i 's/randportlow/'$randportlow'/g' veil.json
+sudo sed -i 's/randportvar/'$randportvar'/g' veil.json
+sudo sed -i 's/randporthigh/'$randporthigh'/g' veil.json
 
 # need to code for the generateseed to be stored here. 
 
