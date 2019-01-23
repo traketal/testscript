@@ -39,7 +39,7 @@ sudo mkdir -p $STORAGE_ROOT/wallets
 fi
 
 sudo setfacl -m u:$USER:rwx $STORAGE_ROOT/wallets
-mkdir -p $STORAGE_ROOT/wallets/."${coind::-1}"
+mkdir -p $STORAGE_ROOT/wallets/.veil
 
 rpcpassword=$(openssl rand -base64 29 | tr -d "=+/")
 rpcport=$(EPHYMERAL_PORT)
@@ -55,7 +55,7 @@ daemon=1
 gen=0
 ' | sudo -E tee $STORAGE_ROOT/wallets/.veil/veil.conf >/dev/null 2>&1
 
-echo "Starting ${coind::-1}"
+echo "Starting Veil"
 /usr/bin/veild -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf" -daemon -shrinkdebugfile
 
 # Create easy daemon start file
