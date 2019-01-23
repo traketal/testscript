@@ -2,7 +2,7 @@ clear
 source /etc/functions.sh
 source $STORAGE_ROOT/nomp/.nomp.conf
 
-cd $HOME/veilpool/nomp
+cd $HOME/veilpool/install
 
 # Check swap
 echo Checking if swap space is needed and if so creating...
@@ -131,4 +131,4 @@ hide_output nvm use 8.11.4
 echo Downloading NOMP Repo...
 hide_output sudo git clone https://github.com/Larcea/node-open-mining-portal.git $STORAGE_ROOT/nomp/nomp_setup/nomp
 
-cd $HOME/nomp_setup/nomp
+cd $HOME/veilpool/install
