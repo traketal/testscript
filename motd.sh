@@ -18,4 +18,4 @@ run-parts /etc/update-motd.d/ | sudo tee /etc/motd
 
 sudo chmod +x /usr/bin/motd
 
-cd $HOME/veilpool/nomp
+cd $HOME/veilpool/install
