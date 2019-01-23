@@ -25,8 +25,8 @@ echo Download and Build coin from tar...
 sudo mkdir $STORAGE_ROOT/daemon_builder/veil
 
 cd $STORAGE_ROOT/daemon_builder/veil
-wget https://github.com/Veil-Project/veil/releases/download/v1.0.0.10/veil-1.0.0-x86_64-linux-gnu.tar.gz
-tar xvfz veil-1.0.0-x86_64-linux-gnu.tar.gz
+sudo wget https://github.com/Veil-Project/veil/releases/download/v1.0.0.10/veil-1.0.0-x86_64-linux-gnu.tar.gz
+sudo tar xvfz veil-1.0.0-x86_64-linux-gnu.tar.gz
 cd $STORAGE_ROOT/daemon_builder/veil/veil-1.0.0/
 
 sudo cp $STORAGE_ROOT/daemon_builder/veil/veil-1.0.0/bin/veild /usr/bin
