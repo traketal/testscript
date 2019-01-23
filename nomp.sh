@@ -1,6 +1,6 @@
 source /etc/functions.sh
 source $STORAGE_ROOT/nomp/.nomp.conf
-source $HOME/multipool/daemon_builder/.my.cnf
+source $HOME/veilpool/daemon_builder/.my.cnf
 
 # Create function for random unused port
 function EPHYMERAL_PORT(){
