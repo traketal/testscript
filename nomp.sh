@@ -1,4 +1,5 @@
 source /etc/functions.sh
+source /etc/veilpool.conf
 source $STORAGE_ROOT/nomp/.nomp.conf
 source $HOME/veilpool/daemon_builder/.my.cnf
 
