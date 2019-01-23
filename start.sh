@@ -29,13 +29,13 @@ export LC_TYPE=en_US.UTF-8
 export NCURSES_NO_UTF8_ACS=1
 
 # Recall the last settings used if we're running this a second time.
-if [ -f /etc/multipool.conf ]; then
+if [ -f /etc/veilpool.conf ]; then
 
 # Load the old .conf file to get existing configuration options loaded
 # into variables with a DEFAULT_ prefix.
-cat /etc/multipool.conf | sed s/^/DEFAULT_/ > /tmp/multipool.prev.conf
-source /tmp/multipool.prev.conf
-rm -f /tmp/multipool.prev.conf
+cat /etc/veilpool.conf | sed s/^/DEFAULT_/ > /tmp/veilpool.prev.conf
+source /tmp/veilpool.prev.conf
+rm -f /tmp/veilpool.prev.conf
 else
 FIRST_TIME_SETUP=1
 fi
