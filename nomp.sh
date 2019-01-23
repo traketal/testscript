@@ -50,8 +50,7 @@ sleep 2
 wallet="$(veil-cli -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf getnewbasecoinaddress)"
 
 
-# SED the coin file
-sudo sed -i 's/coinname/'$coinname'/g' $coinname.json
+# SED the pool config coin file
 sudo sed -i 's/wallet/'$wallet'/g' $coinname.json
 sudo sed -i 's/daemonport/'$rpcport'/g' $coinname.json
 sudo sed -i 's/rpcuser/NOMPrpc/g' $coinname.json
@@ -60,6 +59,7 @@ sudo sed -i 's/randportlow/'$randportlow'/g' $coinname.json
 sudo sed -i 's/randportvar/'$randportvar'/g' $coinname.json
 sudo sed -i 's/randporthigh/'$randporthigh'/g' $coinname.json
 
+# need to code for the generateseed to be stored here. 
 
 # Allow user account to bind to port 80 and 443 with out sudo privs
 apt_install authbind
@@ -69,12 +69,12 @@ sudo chmod 777 /etc/authbind/byport/80
 sudo chmod 777 /etc/authbind/byport/443
 
 # Update site with users information
-cd $STORAGE_ROOT/nomp/site/website/
-sudo sed -i 's/sed_domain/'$DomainName'/g' index.html
-cd $STORAGE_ROOT/nomp/site/website/pages/
-sudo sed -i 's/sed_domain/'$DomainName'/g' dashboard.html
-sudo sed -i 's/sed_stratum/'$StratumURL'/g' getting_started.html
-sudo sed -i 's/sed_domain/'$DomainName'/g' home.html
-sudo sed -i 's/sed_stratum/'$StratumURL'/g' pools.html
+# cd $STORAGE_ROOT/nomp/site/website/
+# sudo sed -i 's/sed_domain/'$DomainName'/g' index.html
+# cd $STORAGE_ROOT/nomp/site/website/pages/
+# sudo sed -i 's/sed_domain/'$DomainName'/g' dashboard.html
+# sudo sed -i 's/sed_stratum/'$StratumURL'/g' getting_started.html
+# sudo sed -i 's/sed_domain/'$DomainName'/g' home.html
+# sudo sed -i 's/sed_stratum/'$StratumURL'/g' pools.html
 
 cd $HOME/veilpool/install
