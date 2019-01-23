@@ -37,6 +37,6 @@ sudo find $STORAGE_ROOT/nomp/site/ -type f -exec chmod 664 {} +
 sudo chgrp www-data $STORAGE_ROOT -R
 sudo chmod g+w $STORAGE_ROOT -R
 
-cd $HOME/veilpool/nomp
+cd $HOME/veilpool/install
 
 echo Web build complete...
