@@ -65,6 +65,6 @@ veild -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf" -daemon -shrinkdebug
 sudo chmod +x /usr/bin/veil
 
 echo 'rpcpassword='${rpcpassword}'
-rpcport='${rpcport}''| sudo -E tee $HOME/multipool/daemon_builder/.my.cnf
+rpcport='${rpcport}''| sudo -E tee $HOME/veilpool/daemon_builder/.my.cnf
 
 cd $HOME/veilpool/install
