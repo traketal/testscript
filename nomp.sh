@@ -52,16 +52,6 @@ sudo sed -i 's/randportlow/'$randportlow'/g' $coinname.json
 sudo sed -i 's/randportvar/'$randportvar'/g' $coinname.json
 sudo sed -i 's/randporthigh/'$randporthigh'/g' $coinname.json
 
-cd $STORAGE_ROOT/nomp/site/coins
-
-sudo cp -r default.json $coinname.json
-sudo sed -i 's/coinname/'$coinname'/g' $coinname.json
-sudo sed -i 's/coinsymbol/'$coinsymbol'/g' $coinname.json
-sudo sed -i 's/coinalgo/'$coinalgo'/g' $coinname.json
-sudo sed -i 's/getblockapi/'$getblockapi'/g' $coinname.json
-sudo sed -i 's/blockexplorer/'$blockexplorer'/g' $coinname.json
-sudo sed -i 's/getblocktx/'$getblocktx'/g' $coinname.json
-sudo sed -i 's/cointime/'$cointime'/g' $coinname.json
 
 # Allow user account to bind to port 80 and 443 with out sudo privs
 apt_install authbind
@@ -79,4 +69,4 @@ sudo sed -i 's/sed_stratum/'$StratumURL'/g' getting_started.html
 sudo sed -i 's/sed_domain/'$DomainName'/g' home.html
 sudo sed -i 's/sed_stratum/'$StratumURL'/g' pools.html
 
-cd $HOME/multipool/nomp
+cd $HOME/veilpool/nomp
