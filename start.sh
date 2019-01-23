@@ -6,6 +6,16 @@ source functions.sh # load our functions
 # copy functions to /etc
 sudo cp -r functions.sh /etc/
 
+
+# Set STORAGE_USER and STORAGE_ROOT to default values (crypto-data and /home/crypto-data), unless
+# we've already got those values from a previous run.
+if [ -z "$STORAGE_USER" ]; then
+STORAGE_USER=$([[ -z "$DEFAULT_STORAGE_USER" ]] && echo "pool-data" || echo "$DEFAULT_STORAGE_USER")
+fi
+if [ -z "$STORAGE_ROOT" ]; then
+STORAGE_ROOT=$([[ -z "$DEFAULT_STORAGE_ROOT" ]] && echo "/home/$STORAGE_USER" || echo "$DEFAULT_STORAGE_ROOT")
+fi
+
 #check for user
 echo Installing needed packages for setup to continue...
 
