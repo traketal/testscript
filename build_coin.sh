@@ -59,10 +59,16 @@ echo "Starting Veil"
 /usr/bin/veild -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf" -daemon -shrinkdebugfile
 
 # Create easy daemon start file
-echo '
-veild -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf" -daemon -shrinkdebugfile
+
+echo 'veild -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf" -daemon -shrinkdebugfile
 ' | sudo -E tee /usr/bin/veil >/dev/null 2>&1
 sudo chmod +x /usr/bin/veil
+
+
+# If we made it this far everything built fine removing last coin.conf and build directory
+
+sudo rm -r $STORAGE_ROOT/daemon_builder/veil
+sudo rm -r $HOME/multipool/daemon_builder/.my.cnf
 
 echo 'rpcpassword='${rpcpassword}'
 rpcport='${rpcport}''| sudo -E tee $HOME/veilpool/daemon_builder/.my.cnf
