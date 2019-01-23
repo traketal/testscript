@@ -69,4 +69,4 @@ sudo sed -i 's/sed_stratum/'$StratumURL'/g' getting_started.html
 sudo sed -i 's/sed_domain/'$DomainName'/g' home.html
 sudo sed -i 's/sed_stratum/'$StratumURL'/g' pools.html
 
-cd $HOME/veilpool/nomp
+cd $HOME/veilpool/install
