@@ -41,4 +41,4 @@ sudo systemctl enable redis
 
 echo Database build complete...
 
-cd $HOME/veilpool/nomp
+cd $HOME/veilpool/install
