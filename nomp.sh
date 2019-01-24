@@ -21,14 +21,14 @@ veil-cli stop
 sleep 2
 
 trap ' ' INT
-seed="$(veild -generateseed=1)"
+seed="$(veild -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf -generateseed=1)"
 
 
 
 
 veil-cli stop
 sleep 2
-veild -daemon=1
+veild -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf -daemon -shrinkdebugfile
 
 echo "Making the NOMPness Monster"
 
