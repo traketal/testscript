@@ -19,10 +19,12 @@ function EPHYMERAL_PORT(){
 
 veil-cli stop
 sleep 2
+
+trap ' ' INT
 seed="$(veild -generateseed=1)"
 
 
-trap ' ' INT
+
 
 veil-cli stop
 sleep 2
