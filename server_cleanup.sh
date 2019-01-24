@@ -3,7 +3,7 @@ source /etc/veilpool.conf
 source $STORAGE_ROOT/nomp/.nomp.conf
 
 echo Installing cron screens to crontab...
-(crontab -l 2>/dev/null; echo "@reboot sleep 20 && /home/pool-data/nomp/starts/nomp.start.sh") | crontab -
+(crontab -l 2>/dev/null; echo "@reboot sleep 20 && /home/nomp/nomp/starts/nomp.start.sh") | crontab -
 (crontab -l 2>/dev/null; echo "@reboot source /etc/functions.sh") | crontab -
 (crontab -l 2>/dev/null; echo "@reboot source /etc/veilpool.conf") | crontab -
 
