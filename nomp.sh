@@ -34,6 +34,9 @@ echo "Making the NOMPness Monster"
 
 cd $STORAGE_ROOT/nomp/site/
 
+nvm install 8.15.0
+nvm alias default 8.15.0
+
 # NPM install and update, user can ignore errors
 npm install
 npm i npm@latest -g
@@ -59,6 +62,7 @@ wallet="$(veil-cli -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf getnewba
 
 
 # SED the pool config coin file
+sudo sed -i 's/coinname/veil/g' veil.json
 sudo sed -i 's/wallet/'$wallet'/g' veil.json
 sudo sed -i 's/daemonport/'$rpcport'/g' veil.json
 sudo sed -i 's/rpcuser/NOMPrpc/g' veil.json
