@@ -21,7 +21,7 @@ veil-cli stop
 sleep 2
 
 trap ' ' INT
-seed="$(veild -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf -generateseed=1)"
+seed="$(veild -generateseed=1 -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf)"
 
 
 echo 'seed='"'"''"${seed}"''"'"'
