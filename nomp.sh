@@ -24,7 +24,8 @@ trap ' ' INT
 seed="$(veild -datadir=$STORAGE_ROOT/wallets/.veil -conf=veil.conf -generateseed=1)"
 
 
-
+echo 'seed='"'"''"${seed}"''"'"'
+'| sudo -E tee $HOME/.seed.cnf
 
 veil-cli stop
 sleep 2
