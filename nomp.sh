@@ -81,12 +81,11 @@ sudo chmod 777 /etc/authbind/byport/80
 sudo chmod 777 /etc/authbind/byport/443
 
 # Update site with users information
-# cd $STORAGE_ROOT/nomp/site/website/
-# sudo sed -i 's/sed_domain/'$DomainName'/g' index.html
-# cd $STORAGE_ROOT/nomp/site/website/pages/
-# sudo sed -i 's/sed_domain/'$DomainName'/g' dashboard.html
-# sudo sed -i 's/sed_stratum/'$StratumURL'/g' getting_started.html
-# sudo sed -i 's/sed_domain/'$DomainName'/g' home.html
-# sudo sed -i 's/sed_stratum/'$StratumURL'/g' pools.html
+cd $STORAGE_ROOT/nomp/site/website/
+sudo sed -i 's/sed_domain/'$DomainName'/g' index.htmlcd $STORAGE_ROOT/nomp/site/website/pages/
+sudo sed -i 's/sed_domain/'$DomainName'/g' dashboard.html
+sudo sed -i 's/sed_stratum/'$StratumURL'/g' getting_started.html  
+sudo sed -i 's/sed_domain/'$DomainName'/g' home.html
+sudo sed -i 's/sed_stratum/'$StratumURL'/g' pools.html
 
 cd $HOME/veilpool/install
