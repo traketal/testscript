@@ -2,7 +2,7 @@ source /etc/functions.sh # load our functions
 
 apt_install lsb-release figlet update-motd \
 landscape-common update-notifier-common
-cd $HOME/veilpool/install//ubuntu/etc/update-motd.d
+cd $HOME/veilpool/install/ubuntu/etc/update-motd.d
 sudo rm -r /etc/update-motd.d/
 sudo mkdir /etc/update-motd.d/
 sudo touch /etc/update-motd.d/00-header ; sudo touch /etc/update-motd.d/10-sysinfo ; sudo touch /etc/update-motd.d/90-footer
